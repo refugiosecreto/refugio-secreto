@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>Mensagens Recebidas</title></head>
+<body>
+<h2>Mensagens recebidas</h2>
+<ul id="mensagens"></ul>
+<script>
+fetch("/api/getMessages")
+  .then(res => res.json())
+  .then(msgs => {
+    const lista = document.getElementById("mensagens");
+    msgs.forEach(msg => {
+      const item = document.createElement("li");
+      item.textContent = `[${msg.data}] ${msg.nome}: ${msg.texto}`;
+      lista.appendChild(item);
+    });
+  });
+</script>
+</body>
+</html>
