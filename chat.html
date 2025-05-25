@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Refúgio Secreto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat">
+        <h1>Chat</h1>
+        <div id="mensagens">
+            <p>Usuário: Olá, como você está?</p>
+            <p>Escuta Anônima: Estou bem, obrigado por perguntar. Como você está?</p>
+        </div>
+        <form id="mensagemForm">
+            <input type="text" id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="cronometro">
+            <h2>Cronômetro</h2>
+            <div id="timer">00:00</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
